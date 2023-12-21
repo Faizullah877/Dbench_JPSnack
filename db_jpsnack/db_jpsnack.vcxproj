@@ -187,14 +187,20 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="db_instruction_set_box.h" />
+    <ClInclude Include="db_jpsnack_define.h" />
     <ClInclude Include="db_jpsnack_jumbf.h" />
     <ClInclude Include="db_jpsnk_desc_box.h" />
     <ClInclude Include="db_jpsnk_instruction.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="db_instruction_set_box.cpp" />
     <ClCompile Include="db_jpsnack_jumbf.cpp" />
     <ClCompile Include="db_jpsnk_desc_box.cpp" />
     <ClCompile Include="db_jpsnk_instruction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

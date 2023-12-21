@@ -1,0 +1,23 @@
+#pragma once
+
+namespace dbench {
+	enum class Rotation
+	{
+		NOT_SPECIFIED = 0x0000,
+		CLOCKWISE_0D = 0x0001,
+		CLOCKWISE_0D_AND_FLIP = 0x0011,
+		CLOCKWISE_90D = 0x0002,
+		CLOCKWISE_90D_AND_FLIP = 0x0012,
+		CLOCKWISE_180D = 0x0003,
+		CLOCKWISE_180D_AND_FLIP = 0x0013,
+		CLOCKWISE_270D = 0x0004,
+		CLOCKWISE_270D_AND_FLIP = 0x0014
+	};
+
+	enum class JPSnkBoxType
+	{
+		INST = 0x696E7374,
+
+	};
+
+}

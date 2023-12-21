@@ -24,6 +24,12 @@
     <ClInclude Include="db_jpsnk_instruction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="db_jpsnack_define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_instruction_set_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="db_jpsnack_jumbf.cpp">
@@ -35,5 +41,11 @@
     <ClCompile Include="db_jpsnk_instruction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="db_instruction_set_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
