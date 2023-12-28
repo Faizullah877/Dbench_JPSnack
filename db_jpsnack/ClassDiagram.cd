@@ -1,18 +1,116 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="DbJPSnack">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="dbench::DbJPSnack" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>db_jpsnack_jumbf.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DbJPSnackInstruction">
-    <Position X="5.5" Y="0.5" Width="2" />
+  <Class Name="dbench::DbJPSnackDescBox" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>cIQjEAAFAAQBAAAgQgAFAAjAAAVwAAQACACAAAEAIAA=</HashCode>
+      <HashCode>gAAAAAAAAAAEAAAQACAIaAAUAQAAIACAJIRAAAAAAAA=</HashCode>
+      <FileName>db_jpsnk_desc_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbJPSnackInstruction" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cIQjECAFAAQBAAQgQggFAAjAAAVwAAQACACAAAkAIAA=</HashCode>
       <FileName>db_jpsnk_instruction.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="dbench::DbInstSetBox" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAgARAQAAAA5gAAAAACEAAgICAEA8QAAAg=</HashCode>
+      <FileName>db_instruction_set_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbFileDescBox" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAKAAAAAApSAAEAKAAAAAAAAAAAYgAIAABgAEI=</HashCode>
+      <FileName>db_bfdb_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbBinaryDataBox" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAABQAAAAAA=</HashCode>
+      <FileName>db_binary_data_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbBox" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARIAAAAAAAAABQIAAACCaQRAgpAAAAAQYAAAgAhAAMA=</HashCode>
+      <FileName>db_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbJumbBox" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAhAAgiIAAAAQAAIAAAYABAAAAAAAI=</HashCode>
+      <FileName>db_jumb_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbEmbdFileJumbBox" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAIAAAAAgAAAIAAAAAAAAAAAIBAAgAAAAAA=</HashCode>
+      <FileName>db_jumb_embedded_file.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbJumbDescBox" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAARAQhCAAJCFAAUBsAqABEEAhEEQQAYCBggAEAYgA=</HashCode>
+      <FileName>db_jumd_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dbench::DbFreeBox" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAABAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>db_free_box.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="dbench::Composition" Collapsed="true">
+    <Position X="18.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>db_jpsnk_desc_box.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="dbench::JpegMarker" Collapsed="true">
+    <Position X="20.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAQgBIAAAAAAAEAQABAQABACMR/AAAAABAAAIAAgAQ=</HashCode>
+      <FileName>db_define.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="dbench::BoxType" Collapsed="true">
+    <Position X="18.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEICgAAACAEAAAAKCAAAgAAAAAAAQAAACCAAA=</HashCode>
+      <FileName>db_define.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="dbench::Rotation" Collapsed="true">
+    <Position X="20.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABABAAAAABIAAAEACAAAAAAABAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>db_define.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="dbench::JumbfContentType" Collapsed="true">
+    <Position X="18.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQAEAAAAAEAAAACCAAAAAAAABAAAAAAACAAA=</HashCode>
+      <FileName>db_define.h</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
