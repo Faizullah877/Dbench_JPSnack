@@ -1,4 +1,5 @@
 #include "db_jpsnk_instruction.h"
+namespace dbench {
 
 DbJPSnackInstruction::DbJPSnackInstruction()
 {
@@ -28,6 +29,13 @@ uint32_t DbJPSnackInstruction::get_yo()
 	return yo_;
 }
 
+void DbJPSnackInstruction::set_xo_yo(uint32_t xo, uint32_t yo)
+{
+	set_xo(xo);
+	set_yo(yo);
+
+}
+
 void DbJPSnackInstruction::set_width(uint32_t w)
 {
 	width_ = w;
@@ -46,6 +54,12 @@ void DbJPSnackInstruction::set_height(uint32_t h)
 uint32_t DbJPSnackInstruction::get_height()
 {
 	return height_;
+}
+
+void DbJPSnackInstruction::set_width_height(uint32_t w, uint32_t h)
+{
+	set_width(w);
+	set_height(h);
 }
 
 void DbJPSnackInstruction::set_persistance(bool p)
@@ -76,6 +90,13 @@ void DbJPSnackInstruction::set_next_use(uint32_t n_u)
 uint32_t DbJPSnackInstruction::get_next_use()
 {
 	return next_use_;
+}
+
+void DbJPSnackInstruction::set_persist_life_nextuse(bool p, uint32_t life, uint32_t n_u)
+{
+	set_persistance(p);
+	set_life(life);
+	set_next_use(n_u);
 }
 
 void DbJPSnackInstruction::set_xc(uint32_t xc)
@@ -116,6 +137,14 @@ void DbJPSnackInstruction::set_hc(uint32_t hc)
 uint32_t DbJPSnackInstruction::get_hc()
 {
 	return hc_;
+}
+
+void DbJPSnackInstruction::set_crop_params(uint32_t xc, uint32_t yc, uint32_t wc, uint32_t hc)
+{
+	set_xc(xc);
+	set_yc(yc);
+	set_wc(wc);
+	set_hc(hc);
 }
 
 void DbJPSnackInstruction::set_rot(Rotation rot)
@@ -191,10 +220,11 @@ Rotation DbJPSnackInstruction::get_rot()
 		break;
 	}
 }
-
-
-
-
+uint16_t DbJPSnackInstruction::get_rot_value()
+{
+	return rot_;
+}
+}
 
 
 

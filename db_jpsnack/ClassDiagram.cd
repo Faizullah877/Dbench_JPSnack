@@ -7,17 +7,10 @@
       <FileName>db_jpsnack_jumbf.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DbJPSnackDescBox">
-    <Position X="2.25" Y="0.5" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAQACAAQAEUAAAAAQSAAAAAARAAAAA=</HashCode>
-      <FileName>db_jpsnk_desc_box.h</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="DbJPSnackInstruction">
     <Position X="5.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>cIQhEAAFAAQBAAAgQgAEAAjAAAVQAAQAAAAAAAEAIAA=</HashCode>
+      <HashCode>cIQjEAAFAAQBAAAgQgAFAAjAAAVwAAQACACAAAEAIAA=</HashCode>
       <FileName>db_jpsnk_instruction.h</FileName>
     </TypeIdentifier>
   </Class>

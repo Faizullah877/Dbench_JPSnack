@@ -1,7 +1,8 @@
 #pragma once
-#include "db_jumbf_lib.h"
+#include "db_box.h"
+#include "db_jumb_box.h"
 
-using namespace dbench;
+namespace dbench {
 
 class DbJPSnack : DbJumbBox
 {
@@ -15,4 +16,5 @@ public:
 
 
 };
+}
 

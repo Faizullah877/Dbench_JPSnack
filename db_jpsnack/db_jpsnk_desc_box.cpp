@@ -1,8 +1,11 @@
 #include "db_jpsnk_desc_box.h"
 
+namespace dbench {
+
 DbJPSnackDescBox::DbJPSnackDescBox()
 {
-	set_tbox(0x6a736462); // jsdb = jpeg snack description box
+//	set_tbox(0x6a736462); // jsdb = jpeg snack description box
+	set_box_type(BoxType::JSDB);
 }
 
 DbJPSnackDescBox::~DbJPSnackDescBox()
@@ -41,6 +44,11 @@ bool DbJPSnackDescBox::is_num_of_composition_present()
 	return no_compositions_present_;
 }
 
+bool DbJPSnackDescBox::is_composition_id_present()
+{
+	return composition_id_present_;
+}
+
 void DbJPSnackDescBox::add_composition(Composition* c)
 {
 	if (compositions_.size() > 0) {
@@ -55,16 +63,12 @@ void DbJPSnackDescBox::add_composition(Composition* c)
 }
 
 // set box with only one composition 
-void DbJPSnackDescBox::set_box(uint8_t ver, uint64_t start_time, uint8_t composition_id, uint8_t no_of_objects, std::list<uint8_t> obj_ids)
+void DbJPSnackDescBox::set_box(uint64_t start_time, uint8_t no_of_objects, std::list<uint8_t> obj_ids)
 {
-	if (ver != 1) {
-		throw std::runtime_error("Error: Version Number other than 1 is not allowed.");
-	}
-	version_ = ver;
+	version_ = 1; // by default version 1
 	start_time_ = start_time;
 	no_compositions_present_ = false;
 	Composition* comp = new Composition;
-	comp->composition_id_ = composition_id;
 	comp->no_of_objects_ = no_of_objects;
 	for (auto id : obj_ids) {
 		comp->objects_ids_.push_back(id);
@@ -121,8 +125,13 @@ void DbJPSnackDescBox::serialize(unsigned char** out_buf, uint64_t* out_buf_size
 
 	db_put_byte(&buf, version_);
 	db_put_8byte(&buf, start_time_);
+	if (no_compositions_present_) {
+		db_put_byte(&buf, no_compositions_);
+	}
 	for (auto comp : compositions_) {
-		db_put_byte(&buf, comp->composition_id_);
+		if (composition_id_present_) {
+			db_put_byte(&buf, comp->composition_id_);
+		}
 		db_put_byte(&buf, comp->no_of_objects_);
 		for (auto id : comp->objects_ids_) {
 			db_put_byte(&buf, id);
@@ -130,3 +139,4 @@ void DbJPSnackDescBox::serialize(unsigned char** out_buf, uint64_t* out_buf_size
 	}
 }
 
+}

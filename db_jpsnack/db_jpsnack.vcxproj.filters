@@ -24,10 +24,31 @@
     <ClInclude Include="db_jpsnk_instruction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="db_jpsnack_define.h">
+    <ClInclude Include="db_instruction_set_box.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="db_instruction_set_box.h">
+    <ClInclude Include="db_bfdb_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_binary_data_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_jumb_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_jumb_embedded_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_jumd_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_free_box.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -42,6 +63,30 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="db_instruction_set_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_bfdb_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_binary_data_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_define.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_jumb_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_jumb_embedded_file.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_jumd_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_free_box.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
