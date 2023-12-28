@@ -1,4 +1,4 @@
-#include "db_instruction_set_box.h"
+#include "db_jpsnk_inst_set_box.h"
 
 namespace dbench {
 DbInstSetBox::DbInstSetBox()
@@ -161,8 +161,7 @@ void DbInstSetBox::serialize(unsigned char** out_buf, uint64_t* out_buf_size)
 			db_put_2byte(&buf, inst->get_rot_value());
 		}
 	}
-
-
+	*out_buf_size = buf_size_t;
 }
 
 }

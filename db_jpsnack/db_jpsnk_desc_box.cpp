@@ -137,6 +137,7 @@ void DbJPSnackDescBox::serialize(unsigned char** out_buf, uint64_t* out_buf_size
 			db_put_byte(&buf, id);
 		}
 	}
+	*out_buf_size = buf_size_t;
 }
 
 }

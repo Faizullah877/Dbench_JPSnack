@@ -205,10 +205,11 @@
     <ClInclude Include="db_box.h" />
     <ClInclude Include="db_define.h" />
     <ClInclude Include="db_free_box.h" />
-    <ClInclude Include="db_instruction_set_box.h" />
+    <ClInclude Include="db_jpsnk_inst_set_box.h" />
     <ClInclude Include="db_jpsnack_jumbf.h" />
     <ClInclude Include="db_jpsnk_desc_box.h" />
     <ClInclude Include="db_jpsnk_instruction.h" />
+    <ClInclude Include="db_jpsnk_obmb.h" />
     <ClInclude Include="db_jumb_box.h" />
     <ClInclude Include="db_jumb_embedded_file.h" />
     <ClInclude Include="db_jumd_box.h" />
@@ -219,10 +220,11 @@
     <ClCompile Include="db_box.cpp" />
     <ClCompile Include="db_define.cpp" />
     <ClCompile Include="db_free_box.cpp" />
-    <ClCompile Include="db_instruction_set_box.cpp" />
+    <ClCompile Include="db_jpsnk_inst_set_box.cpp" />
     <ClCompile Include="db_jpsnack_jumbf.cpp" />
     <ClCompile Include="db_jpsnk_desc_box.cpp" />
     <ClCompile Include="db_jpsnk_instruction.cpp" />
+    <ClCompile Include="db_jpsnk_obmb.cpp" />
     <ClCompile Include="db_jumb_box.cpp" />
     <ClCompile Include="db_jumb_embedded_file.cpp" />
     <ClCompile Include="db_jumd_box.cpp" />

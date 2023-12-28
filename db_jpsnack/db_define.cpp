@@ -130,12 +130,12 @@ namespace dbench {
 			for (auto i = 0; i < 16; i++)
 				jumb_content_type_uuid[i] = uuid_content_type[i];
 		}
-		//else if (type == JumbfContentType::JPEGSnack) {
-		//	jumb_content_type_uuid = new unsigned char[16];
-		//	unsigned char uuid_content_type[16] = { 0x16, 0xAD, 0x91, 0xE0, 0xA3, 0x7F, 0x11, 0xEB, 0x9D, 0x0D, 0x08, 0x00, 0x20, 0x0C, 0x9A, 0x66 };
-		//	for (auto i = 0; i < 16; i++)
-		//		jumb_content_type_uuid[i] = uuid_content_type[i];
-		//}
+		else if (type == JumbfContentType::JPSNACK) {
+			jumb_content_type_uuid = new unsigned char[16];
+			unsigned char uuid_content_type[16] = { 0x16, 0xAD, 0x91, 0xE0, 0xA3, 0x7F, 0x11, 0xEB, 0x9D, 0x0D, 0x08, 0x00, 0x20, 0x0C, 0x9A, 0x66 };
+			for (auto i = 0; i < 16; i++)
+				jumb_content_type_uuid[i] = uuid_content_type[i];
+		}
 		else if (type == JumbfContentType::EMBEDDED_File) {
 			jumb_content_type_uuid = new unsigned char[16]; // 0x40CB0C32-BB8A-489D-A70B-2AD6F47F4369
 			unsigned char uuid_content_type[16] = { 0x40, 0xCB, 0x0C, 0x32, 0xBB, 0x8A, 0x48, 0x9D, 0xA7, 0x0B, 0x2A, 0xD6, 0xF4, 0x7F, 0x43, 0x69 };
@@ -196,11 +196,11 @@ namespace dbench {
 		//	return JumbfContentType::JPEG360;
 		//}
 
-		//orig = db_get_jumbf_content_type_uuid(JumbfContentType::JPEGSnack);
-		//if (memcmp(orig, type_16b, 16) == 0) {
-		//	delete[] orig;
-		//	return JumbfContentType::JPEGSnack;
-		//}
+		orig = db_get_jumbf_content_type_uuid(JumbfContentType::JPSNACK);
+		if (memcmp(orig, type_16b, 16) == 0) {
+			delete[] orig;
+			return JumbfContentType::JPSNACK;
+		}
 		delete[] orig;
 		return JumbfContentType::UNDEF;
 	}
@@ -248,6 +248,9 @@ namespace dbench {
 			break;
 		case 0x696E7374:
 			type = BoxType::INST;
+			break;
+		case 0x6F626D62:
+			type = BoxType::OBMB; 
 			break;
 		default:
 			break;

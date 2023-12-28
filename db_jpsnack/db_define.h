@@ -88,6 +88,7 @@ namespace dbench {
 		PRIV = 0x70726976, // Private box
 		INST = 0x696E7374, // jpeg snack "inst" instruction set box
 		JSDB = 0x6A736462, // jpeg snack description box
+		OBMB = 0x6F626D62, // jpeg snack object metadata box
 		UNDEF = 0x00000000  // undefined
 	};
 	enum class Rotation
@@ -111,6 +112,7 @@ namespace dbench {
 		EMBEDDED_File,   // 0x40CB0C32-BB8A-489D-A70B-2AD6F47F4369
 		CBOR,			 // 0x63626F72-0011-0010-8000-00AA00389B71
 		JPEG360,
+		JPSNACK, // 0x16AD91E0-A37F-11EB-9D0D-0800200C9A66 
 		UNDEF
 	};
 	bool isNthBitSet_1(unsigned char byte, int n);

@@ -5,7 +5,8 @@
 #include <list>
 #include "db_jpsnk_desc_box.h"
 #include "db_jpsnk_instruction.h"
-#include "db_instruction_set_box.h"
+#include "db_jpsnk_inst_set_box.h"
+#include "db_jpsnk_obmb.h"
 
 
 using namespace std;
@@ -24,25 +25,46 @@ int main()
     //uint64_t buf_size = 0;
     //jpsnk_desc_box.serialize(&buf, &buf_size);
 
-    DbJPSnackInstruction* inst = new DbJPSnackInstruction;
-    inst->set_xo_yo(0, 0);
-    inst->set_width_height(512, 256);
-    inst->set_persist_life_nextuse(0, 12, 0);
+    //DbJPSnackInstruction* inst = new DbJPSnackInstruction;
+    //inst->set_xo_yo(0, 0);
+    //inst->set_width_height(512, 256);
+    //inst->set_persist_life_nextuse(0, 12, 0);
 
-    DbInstSetBox inst_set_box;
-    inst_set_box.set_repetition(1);
-    inst_set_box.set_tick(1000);
-    inst_set_box.set_xo_yo_flag(true);
-    inst_set_box.set_width_height_flag(true);
-    inst_set_box.set_persist_life_nextuse_flag(true);
-    inst_set_box.insert_instruction(inst);
+    //DbInstSetBox inst_set_box;
+    //inst_set_box.set_repetition(1);
+    //inst_set_box.set_tick(1000);
+    //inst_set_box.set_xo_yo_flag(true);
+    //inst_set_box.set_width_height_flag(true);
+    //inst_set_box.set_persist_life_nextuse_flag(true);
+    //inst_set_box.insert_instruction(inst);
 
-    unsigned char* buf2 = nullptr;
-    uint64_t buf_size2 = 0;
-    inst_set_box.serialize(&buf2, &buf_size2);
+    //unsigned char* buf2 = nullptr;
+    //uint64_t buf_size2 = 0;
+    //inst_set_box.serialize(&buf2, &buf_size2);
+    //
+    //delete[] buf2;
+    //delete inst;
+
+    DbObjMetaDataBox box;
+
+    box.set_object_id(1);
+    box.set_media_type("image/jpg");
+    box.set_no_of_media(6);
+    box.add_location("self#jumbf=Object1");
+    box.add_location("self#jumbf=Object2");
+    box.add_location("self#jumbf=Object3");
+    box.add_location("self#jumbf=Object4");
+    box.add_location("self#jumbf=Object5");
+    box.add_location("self#jumbf=Object6");
+
+
+    unsigned char* buf3 = nullptr;
+    uint64_t buf_size3 = 0;
+    box.serialize(&buf3, &buf_size3);
     
-    delete[] buf2;
-    delete inst;
+    delete[] buf3;
+
+
 
     std::cout << "Hello World!\n";
     return 0;
