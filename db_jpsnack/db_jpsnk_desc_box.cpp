@@ -65,6 +65,9 @@ void DbJPSnackDescBox::add_composition(Composition* c)
 // set box with only one composition 
 void DbJPSnackDescBox::set_box(uint64_t start_time, uint8_t no_of_objects, std::list<uint8_t> obj_ids)
 {
+	if (no_of_objects != obj_ids.size()) {
+		throw std::runtime_error("Error: Setting JPEG Snack Description Box, No of Objects and size of list object IDs do not match");
+	}
 	version_ = 1; // by default version 1
 	start_time_ = start_time;
 	no_compositions_present_ = false;
@@ -104,6 +107,11 @@ void DbJPSnackDescBox::set_box_size()
 		lbox_ = static_cast<uint32_t>(box_size_);
 		xl_box_present_ = false;
 	}
+}
+uint64_t DbJPSnackDescBox::get_box_size()
+{
+	set_box_size();
+	return box_size_;
 }
 void DbJPSnackDescBox::serialize(unsigned char** out_buf, uint64_t* out_buf_size)
 {

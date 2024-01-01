@@ -21,6 +21,7 @@ namespace dbench {
 		void add_location(std::string loc);
 
 		void set_box_size();
+		uint64_t get_box_size();
 		void serialize(unsigned char** out_buf, uint64_t* out_buf_size);
 
 	private:

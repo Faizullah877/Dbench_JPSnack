@@ -71,6 +71,12 @@ void DbObjMetaDataBox::set_box_size()
 	}
 }
 
+uint64_t DbObjMetaDataBox::get_box_size()
+{
+	set_box_size();
+	return box_size_;
+}
+
 void DbObjMetaDataBox::serialize(unsigned char** out_buf, uint64_t* out_buf_size)
 {
 	set_box_size();

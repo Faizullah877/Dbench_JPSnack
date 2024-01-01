@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="dbench::DbJPSnack" Collapsed="true">
+  <Class Name="dbench::DbJPSnackJumbBox" Collapsed="true">
     <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAIAAAYAYAAAACAAQAAAIAgBAAAAAAA=</HashCode>
       <FileName>db_jpsnack_jumbf.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="dbench::DbJPSnackDescBox" Collapsed="true">
     <Position X="9.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAEAAAQACAIaAAUAQAAIACAJIRAAAAAAAA=</HashCode>
+      <HashCode>gAAAAAAAAAAEAAIQACAIaAAUAQAAIACAJIRAAAAAAAA=</HashCode>
       <FileName>db_jpsnk_desc_box.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,7 +24,7 @@
   <Class Name="dbench::DbInstSetBox" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAgARAQAAAA5gAAAAACEAAgICAEA8QAAAg=</HashCode>
+      <HashCode>AAAAAAEAAAAgARIQAAAA5gAAAAACEAAgICAEA8QAAAg=</HashCode>
       <FileName>db_jpsnk_inst_set_box.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -108,7 +108,7 @@
   <Enum Name="dbench::JumbfContentType" Collapsed="true">
     <Position X="18.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEQAEAAAAAEAAAACCAAAAAAAABAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAEQAEAAAAAEAAEACCAAAAAAAABAAAAAAACAAA=</HashCode>
       <FileName>db_define.h</FileName>
     </TypeIdentifier>
   </Enum>

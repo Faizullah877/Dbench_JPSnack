@@ -115,6 +115,12 @@ void DbInstSetBox::set_box_size()
 	}
 }
 
+uint64_t DbInstSetBox::get_box_size()
+{
+	set_box_size();
+	return box_size_;
+}
+
 void DbInstSetBox::serialize(unsigned char** out_buf, uint64_t* out_buf_size)
 {
 	set_box_size();		
