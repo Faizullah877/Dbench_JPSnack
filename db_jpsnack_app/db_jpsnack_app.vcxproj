@@ -150,11 +150,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="db_jpsnack_app.cpp" />
+    <ClCompile Include="jpsnk_cmd_params.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\db_jpsnack\db_jpsnack.vcxproj">
       <Project>{4ef4b1a9-49d5-40b0-87ad-174402259ca5}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jpsnk_cmd_params.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\db_jpsnack\jpsnk_slide_show_example.cfg" />
+    <None Include="jpsnk_multiple_objs_example.cfg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
