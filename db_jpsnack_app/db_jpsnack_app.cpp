@@ -6,6 +6,7 @@
 #include <string>
 #include <iomanip>
 #include <chrono>
+#include <fstream>
 
 #include "db_jpsnk_desc_box.h"
 #include "db_jpsnk_instruction.h"
@@ -50,20 +51,73 @@ int main(int argc, const char* argv[])
 				exit(EXIT_SUCCESS);
 			}
 		}
-
 		if (task == WorkType::ENCODE) {
-			string cfg_file{ "" };
-			for (int i = 1; i < argc; i++) {
+			string cfg_file_path{ "" };
+			for (int i = 2; i < argc; i++) {
 
 				std::string arg = argv[i++];
 				if (arg == opt_cfg_file) {
-					cfg_file = argv[i];
+					cfg_file_path = argv[i];
 					break;
 				}
 			}
 
+			ifstream cfg_file;
+			cfg_file.open(cfg_file_path.c_str(), fstream::in);
+			if (cfg_file.is_open())
+			{
+				string background_image_path{ "" };
+				string jpsnk_file_path{ "" };
+				uint32_t start_time{ 0 };
+				uint8_t no_of_objects{ 0 };
+				list<uint8_t> obj_ids;
 
+				string line;
+				do {
+					std::getline(cfg_file, line);
+					if (line.empty())
+						continue;
+					if (line.front() == '#') {
+						continue;
+					}
+					else {
+						if (line.find("default_image_path")!=string::npos) {
+							size_t pos = line.find(" = ");
+							background_image_path = line.substr(pos+2);
+						}
+						else if (line.find("jpsnk_file") != string::npos) {
+							size_t pos = line.find(" = ");
+							jpsnk_file_path = line.substr(pos + 2);
+						}
+						else if (line.find("start_time") != string::npos) {
+							size_t pos = line.find(" = ");
+							string s_time = line.substr(pos + 2);
+							start_time = stoul(s_time);
+						}
+						else if (line.find("No_of_Objects") != string::npos) {
+							size_t pos = line.find(" = ");
+							no_of_objects = uint8_t(stoul(line.substr(pos + 2)));
+						}
+						else if (line.find("Object_IDs_List") != string::npos) {
+							size_t pos = line.find(" = ");
+							string ids_str = line.substr(pos + 2);
+							std::stringstream ss(ids_str);
 
+							for (int i; ss >> i;) {
+								if (i < 0 || i> 255) {
+									throw std::runtime_error("Error: Object IDs should be 0-255\n");
+								}
+								obj_ids.push_back(uint8_t(i));
+								if (ss.peek() == ',')
+									ss.ignore();
+							}
+						}
+
+					}
+
+				} while (1);
+
+			}
 
 
 		}
