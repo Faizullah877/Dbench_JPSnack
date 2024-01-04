@@ -26,6 +26,9 @@
     <ClInclude Include="jpsnk_cmd_params.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="jpsnk_encoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\db_jpsnack\jpsnk_slide_show_example.cfg">

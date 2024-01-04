@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="jpsnk_cmd_params.h" />
+    <ClInclude Include="jpsnk_encoder.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\db_jpsnack\jpsnk_slide_show_example.cfg" />
