@@ -151,6 +151,7 @@
   <ItemGroup>
     <ClCompile Include="db_jpsnack_app.cpp" />
     <ClCompile Include="jpsnk_cmd_params.cpp" />
+    <ClCompile Include="jpsnk_encoder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\db_jpsnack\db_jpsnack.vcxproj">

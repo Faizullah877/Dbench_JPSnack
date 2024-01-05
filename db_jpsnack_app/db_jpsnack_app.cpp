@@ -52,6 +52,7 @@ int main(int argc, const char* argv[])
 			}
 		}
 		if (task == WorkType::ENCODE) {
+
 			string cfg_file_path{ "" };
 			for (int i = 2; i < argc; i++) {
 
