@@ -70,6 +70,7 @@ int main(int argc, const char* argv[])
 			enc.set_output_fname_cfg_file();
 			enc.set_start_time_value();
 			enc.set_no_of_object_value();
+			enc.set_objects_data();
 
 
 			ifstream cfg_file;

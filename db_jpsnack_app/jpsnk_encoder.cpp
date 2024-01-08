@@ -55,6 +55,10 @@ std::string Encoder::get_str_from_cfg_file_for(std::string search_str)
 		if (line.find(search_str) != std::string::npos) {
 			size_t pos = line.find(" = ");
 			value_str = line.substr(pos + 2);
+			size_t a = value_str.find("#");
+			if (a != std::string::npos) {
+				value_str = value_str.substr(0, a);
+			}
 			break;
 		}
 	}
@@ -90,8 +94,10 @@ void Encoder::set_objects_data()
 
 		obj->meta.set_no_of_media(uint8_t(stoul(get_str_from_cfg_file_for("No. of Media"))));
 		for (auto x = 0; x < obj->meta.get_no_of_media(); x++) {
-
+			string str_s = "media file " + to_string(x) + "path ";
+			obj->media_paths.push_back(get_str_from_cfg_file_for(str_s));
 		}
+
 
 	}
 }
