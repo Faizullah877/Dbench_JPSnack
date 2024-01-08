@@ -14,6 +14,7 @@
 #include "db_jpsnk_obmb.h"
 #include "db_jpsnack_jumbf.h"
 #include "jpsnk_cmd_params.h"
+#include "jpsnk_encoder.h"
 
 
 
@@ -62,6 +63,14 @@ int main(int argc, const char* argv[])
 					break;
 				}
 			}
+
+			Encoder enc;
+			enc.initiate(argc, argv);
+			enc.set_bg_img_fname_cfg_file();
+			enc.set_output_fname_cfg_file();
+			enc.set_start_time_value();
+			enc.set_no_of_object_value();
+
 
 			ifstream cfg_file;
 			cfg_file.open(cfg_file_path.c_str(), fstream::in);

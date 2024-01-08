@@ -19,6 +19,10 @@ namespace dbench {
 		void set_opacity(float opc);
 		void set_style(std::string styl);
 		void add_location(std::string loc);
+		uint8_t get_object_id();
+		uint8_t get_no_of_media();
+		std::string get_media_type();
+
 
 		void set_box_size();
 		uint64_t get_box_size();

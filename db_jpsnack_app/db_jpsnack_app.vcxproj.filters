@@ -21,12 +21,21 @@
     <ClCompile Include="jpsnk_cmd_params.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="jpsnk_encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jpsnk_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="jpsnk_cmd_params.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="jpsnk_encoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jpsnk_object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -40,6 +40,21 @@ void DbObjMetaDataBox::add_location(std::string loc)
 	locations_.push_back(loc);
 }
 
+uint8_t DbObjMetaDataBox::get_object_id()
+{
+	return object_id_;
+}
+
+uint8_t DbObjMetaDataBox::get_no_of_media()
+{
+	return no_of_media_;
+}
+
+std::string DbObjMetaDataBox::get_media_type()
+{
+	return media_type_;
+}
+
 void DbObjMetaDataBox::set_box_size()
 {
 	box_size_ = 10; // lbox(4) + tbox(4)+ toggle(1(byte) + object id(1)

@@ -152,6 +152,7 @@
     <ClCompile Include="db_jpsnack_app.cpp" />
     <ClCompile Include="jpsnk_cmd_params.cpp" />
     <ClCompile Include="jpsnk_encoder.cpp" />
+    <ClCompile Include="jpsnk_object.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\db_jpsnack\db_jpsnack.vcxproj">
@@ -161,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="jpsnk_cmd_params.h" />
     <ClInclude Include="jpsnk_encoder.h" />
+    <ClInclude Include="jpsnk_object.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\db_jpsnack\jpsnk_slide_show_example.cfg" />
